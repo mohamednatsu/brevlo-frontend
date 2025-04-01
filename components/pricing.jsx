@@ -3,20 +3,21 @@
 import { motion } from 'framer-motion'
 import { Check, Zap, Star, Gem, Crown, Sparkles } from 'lucide-react'
 import { useTheme } from '@/context/ThemeContext'
+import Link from 'next/link'
 
 export default function PricingPage() {
        const { theme } = useTheme()
        const plans = [
               {
                      name: 'Starter',
-                     price: '$9',
+                     price: '$0',
                      period: 'per month',
                      description: 'Perfect for individuals getting started',
                      icon: <Zap className="text-primary dark:text-primary-400" size={20} />,
                      featured: false,
                      cta: 'Get Started',
                      features: [
-                            '10 summaries per month',
+                            '15 summaries per month',
                             'Basic AI models',
                             'PDF & Text exports',
                             'Email support',
@@ -25,7 +26,7 @@ export default function PricingPage() {
               },
               {
                      name: 'Pro',
-                     price: '$29',
+                     price: '$9',
                      period: 'per month',
                      description: 'For power users and small teams',
                      icon: <Star className="text-secondary dark:text-secondary-300" size={20} />,
@@ -37,7 +38,6 @@ export default function PricingPage() {
                             'All export formats',
                             'Priority support',
                             'Up to 3 users',
-                            'API access'
                      ]
               },
               {
@@ -162,7 +162,9 @@ export default function PricingPage() {
                                                                       whileHover={{ scale: 1.02 }}
                                                                       whileTap={{ scale: 0.98 }}
                                                                >
+                                                                      <Link href={"/auth"}>
                                                                       {plan.cta}
+                                                                      </Link>
                                                                </motion.button>
                                                                <ul className="space-y-3">
                                                                       {plan.features.map((feature, i) => (

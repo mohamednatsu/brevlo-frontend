@@ -8,6 +8,7 @@ import logo from '@/assets/logo.png';
 import MainButton from './ui/MainButton';
 import SecondButton from './ui/SecondButton';
 import ThemeToggle from './ui/ThemeToggle';
+import Link from 'next/link';
 
 const navItems = [
        { name: 'Home', href: '/' },
@@ -79,10 +80,14 @@ export default function Navbar() {
 
                                           <div className="flex justify-center items-center gap-5">
                                                  <MainButton>
-                                                        Sign Up
+                                                        <Link href={"/auth"}>
+                                                               Sign Up
+                                                        </Link>
                                                  </MainButton>
                                                  <SecondButton>
-                                                        Log In
+                                                        <Link href={"/auth"}>
+                                                               Log in
+                                                        </Link>
                                                  </SecondButton>
                                           </div>
                                    </nav>
@@ -127,10 +132,14 @@ export default function Navbar() {
 
                                                         <div className="flex justify-center items-center gap-5">
                                                                <MainButton>
-                                                                      Sign Up
+                                                                      <Link href={"/auth"}>
+                                                                             Sign Up
+                                                                      </Link>
                                                                </MainButton>
                                                                <SecondButton>
-                                                                      Log In
+                                                                      <Link href={"/auth"}>
+                                                                             Log in
+                                                                      </Link>
                                                                </SecondButton>
                                                         </div>
                                                  </div>
