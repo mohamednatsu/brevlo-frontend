@@ -37,3 +37,11 @@ html {
   
   /* Add any other base styles here */
 }
+
+[dir="rtl"] .feature-item {
+  text-align: right;
+}
+
+[dir="rtl"] .feature-carousel {
+  direction: rtl;
+}

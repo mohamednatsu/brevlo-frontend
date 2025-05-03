@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef } from 'react'
+
+import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import HeroSection from '@/components/hero'
 import FeaturesSection from '@/components/features'
@@ -12,6 +13,7 @@ import ContactSection from '@/components/contact'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import Head from "next/head";
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const containerRef = useRef()
@@ -21,9 +23,17 @@ export default function Home() {
   })
 
   const { theme } = useTheme() // Get current theme
+  const { locale } = useRouter();
+
 
   const backgroundScale = useTransform(scrollYProgress, [0, 1], [1, 1.05])
   const backgroundOpacity = useTransform(scrollYProgress, [0.7, 0.9], [1, 0])
+
+
+  useEffect(() => {
+    document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   return (
     <div className="">
@@ -95,7 +105,7 @@ export default function Home() {
           <FeaturesSection />
           <ProcessSection />
           <PricingPage />
-          <TestimonialsSection />
+          {/* <TestimonialsSection /> */}
           <ContactSection />
         </div>
 

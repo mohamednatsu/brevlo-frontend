@@ -1,0 +1,34 @@
+{
+       "hero": {
+              "tagline": "Next-Gen AI Summarization",
+              "title_part1": "Smarter Reading,",
+              "title_part2": "Faster Understanding",
+              "features": {
+              "lecture_notes": {
+                     "title": "Lecture Notes",
+                     "description": "Transform lengthy lectures into concise study guides"
+              },
+              "meeting_minutes": {
+                     "title": "Meeting Minutes",
+                     "description": "Extract action items from hours of discussions"
+              },
+              "research_papers": {
+                     "title": "Research Papers",
+                     "description": "Get key findings without reading entire documents"
+              }
+              },
+              "buttons": {
+              "get_started": "Get Started",
+              "live_demo": "See Live Demo"
+              }
+       },
+
+       "nav": {
+              "home": "Home",
+              "features": "Features",
+              "pricing": "Pricing",
+              "about": "About",
+              "signup": "Sign Up",
+              "login": "Log in"
+       }
+}
